@@ -1,0 +1,15 @@
+{
+  "name": "fly-client-portal",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server/index.js",
+    "start": "node server/index.js",
+    "next:dev": "npm --prefix next run dev",
+    "next:build": "npm --prefix next run build",
+    "next:start": "npm --prefix next run start",
+    "test": "node --test",
+    "build": "node --check server/index.js && node --check public/app.js"
+  }
+}
