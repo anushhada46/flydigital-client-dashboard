@@ -18,7 +18,4 @@
   #influencer-marketing{order:4}
 }
 
-/* Keep each card at its content height so the two independent stacks can pack upward. */
-.services-card-grid{grid-auto-rows:max-content}
-.service-detail-card{min-height:0}
 
