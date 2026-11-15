@@ -17,3 +17,20 @@
   #ppc-google-ads{order:3}
   #influencer-marketing{order:4}
 }
+
+/* Keep each card at its content height so the two independent stacks can pack upward. */
+.services-card-grid{grid-auto-rows:max-content}
+.service-detail-card{min-height:0}
+
+/* Desktop: keep the active-services/approvals stack independent from the reports stack. */
+@media(min-width:1081px){
+  .dashboard-grid{align-items:start;grid-auto-rows:max-content;column-gap:0}
+  .main-column,.side-column{display:flex;flex-direction:column;align-self:start;min-height:0;row-gap:24px}
+  .side-column{padding-left:24px}
+}
+
+/* Smaller screens return to one normal document flow in the intended order. */
+@media(max-width:700px){
+  .dashboard-grid{display:grid;grid-template-columns:1fr}
+  .main-column,.side-column{display:grid;grid-template-columns:1fr;align-content:start;min-height:0;row-gap:24px;padding-left:0}
+}
