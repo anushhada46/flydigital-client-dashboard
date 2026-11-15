@@ -6,7 +6,7 @@ import { createRepository } from './repository.js';
 
 const root = fileURLToPath(new URL('../public', import.meta.url));
 const repository = createRepository();
-const mime = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.svg': 'image/svg+xml' };
+const mime = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp' };
 
 const send = (res, status, body, type = 'application/json') => { res.writeHead(status, { 'Content-Type': `${type}; charset=utf-8`, 'Cache-Control': 'no-store', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Content-Type', 'Access-Control-Allow-Methods': 'GET,POST,OPTIONS' }); res.end(type === 'application/json' ? JSON.stringify(body) : body); };
 const readBody = async (req) => { let body = ''; for await (const chunk of req) body += chunk; return body ? JSON.parse(body) : {}; };
@@ -24,7 +24,7 @@ const server = createServer(async (req, res) => {
     const requested = url.pathname === '/' ? 'index.html' : normalize(url.pathname).replace(/^\//, '');
     if (requested.includes('..')) return send(res, 403, { error: 'Forbidden' });
     const file = await readFile(join(root, requested));
-    return send(res, 200, file, mime[extname(file)] || 'application/octet-stream');
+    return send(res, 200, file, mime[extname(requested)] || 'application/octet-stream');
   } catch (error) {
     return send(res, error.message === 'Deliverable not found' ? 404 : 500, { error: error.message });
   }
