@@ -1,5 +1,5 @@
-import { PortalShell } from '../components/portal-shell';
+import { OnboardingGate } from '../components/onboarding-gate';
 
 export default function HomePage() {
-  return <PortalShell mode="workspace" />;
+  return <OnboardingGate />;
 }
