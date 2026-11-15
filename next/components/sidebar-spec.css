@@ -55,7 +55,7 @@
   .side-column > .dash-card:nth-child(3) { grid-column: 2; grid-row: 3; }
   .side-column > .dash-card:nth-child(4) { grid-column: 2; grid-row: 4; }
   .main-column > .dash-card, .side-column > .dash-card { align-self: start; }
-  .side-column > .dash-card:nth-child(2) { margin-top: -160px; position: relative; z-index: 1; }
+  .side-column > .dash-card:nth-child(2) { position: relative; z-index: 1; }
 }
 .services-dashboard-card { background: #02b180 !important; color: #f2f2f2; }
 .services-dashboard-card .card-heading { border-bottom: 0; margin-bottom: 13px; align-items: center; }
