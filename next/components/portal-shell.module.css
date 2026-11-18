@@ -1,0 +1,850 @@
+.root :global(.card-eyebrow), .root :global(.attention-label) {
+  display: block;
+  font: 700 11px/1 var(--body);
+  letter-spacing: 1.4px;
+}
+
+.root :global(.welcome) {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 46px 0 36px;
+}
+
+.root :global(.welcome p) {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.root :global(.welcome p i) {
+  font-style: normal;
+  margin: 0 7px;
+}
+
+.root :global(.welcome-stamp) {
+  width: 100px;
+  height: 100px;
+  border: var(--border);
+  box-shadow: var(--shadow);
+  background: var(--yellow);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font: 700 40px/.63 var(--heading);
+  transform: rotate(4deg);
+}
+
+.root :global(.welcome-stamp small) {
+  font: 700 10px/1 var(--body);
+  letter-spacing: 1px;
+}
+
+.root :global(.attention) {
+  background: var(--red);
+  border: var(--border);
+  box-shadow: var(--shadow);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 24px;
+  margin-bottom: 30px;
+}
+
+.root :global(.attention-label) {
+  font-size: 12px;
+}
+
+.root :global(.attention h2) {
+  font-size: 30px;
+  line-height: .9;
+  margin: 9px 0 0;
+}
+
+.root :global(.attention-pills) {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: end;
+}
+
+.root :global(.attention-pills span) {
+  border: var(--border);
+  background: var(--white);
+  color: var(--ink);
+  padding: 9px 12px;
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.root :global(.attention-pills b) {
+  font-size: 20px;
+}
+
+.root :global(.attention-pills i) {
+  font-style: normal;
+  margin-left: 7px;
+}
+
+.root :global(.dashboard-grid) {
+  display: grid;
+  grid-template-columns: minmax(0,1.23fr) minmax(360px,.77fr);
+  gap: 24px;
+}
+
+.root :global(.main-column), .root :global(.side-column) {
+  display: grid;
+  align-content: start;
+  gap: 24px;
+}
+
+.root :global(.dash-card) {
+  border: var(--border);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  background: var(--white);
+}
+
+.root :global(.dash-card.blue) {
+  background: var(--blue);
+}
+
+.root :global(.dash-card.green) {
+  background: var(--green);
+}
+
+.root :global(.dash-card.pink) {
+  background: var(--pink);
+}
+
+.root :global(.dash-card.red) {
+  background: var(--red);
+  color: #fff;
+}
+
+.root :global(.dash-card.yellow) {
+  background: var(--yellow);
+}
+
+.root :global(.card-heading) {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 15px;
+  border-bottom: var(--border);
+  padding-bottom: 14px;
+  margin-bottom: 17px;
+}
+
+.root :global(.card-eyebrow) {
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.root :global(.card-heading h2) {
+  font-size: 35px;
+  line-height: .75;
+  margin: 0;
+}
+
+.root :global(.card-action) {
+  background: var(--white);
+  border: var(--border);
+  box-shadow: 3px 3px 0 var(--ink);
+  padding: 7px 10px;
+  font-weight: 800;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.root :global(.card-action span) {
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.root :global(.service-progress) {
+  margin: 17px 0;
+}
+
+.root :global(.progress-meta) {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  font-size: 18px;
+}
+
+.root :global(.progress-meta span) {
+  font: 700 25px var(--heading);
+}
+
+.root :global(.progress-track) {
+  height: 14px;
+  border: var(--border);
+  background: var(--white);
+  margin: 7px 0 4px;
+}
+
+.root :global(.progress-track i) {
+  display: block;
+  height: 100%;
+  background: var(--yellow);
+  border-right: var(--border);
+}
+
+.root :global(.service-progress small), .root :global(.approval-item small), .root :global(.invoice small), .root :global(.deliverable small), .root :global(.report small), .root :global(.team-member small), .root :global(.message p), .root :global(.activity-item small) {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.root :global(.approval-item), .root :global(.invoice), .root :global(.deliverable), .root :global(.report), .root :global(.message), .root :global(.team-member), .root :global(.activity-item) {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(16,24,32,.55);
+  padding: 13px 0;
+}
+
+.root :global(.approval-item:last-child), .root :global(.invoice:last-child), .root :global(.deliverable:last-child), .root :global(.report:last-child), .root :global(.message:last-child), .root :global(.team-member:last-child), .root :global(.activity-item:last-child) {
+  border-bottom: 0;
+}
+
+.root :global(.approval-mark) {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border: var(--border);
+  background: var(--red);
+  color: #fff;
+  font-weight: 900;
+  flex: none;
+}
+
+.root :global(.approval-item>div), .root :global(.invoice>div), .root :global(.deliverable>div:nth-child(2)), .root :global(.report>div), .root :global(.message>div), .root :global(.team-member>div), .root :global(.activity-item>div) {
+  flex: 1;
+}
+
+.root :global(.approval-item b), .root :global(.invoice b), .root :global(.deliverable b), .root :global(.report b), .root :global(.message b), .root :global(.team-member b), .root :global(.activity-item b) {
+  display: block;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.root :global(.approval-item i) {
+  font-style: normal;
+  margin: 0 4px;
+}
+
+.root :global(.view-button) {
+  background: transparent;
+  border: var(--border);
+  padding: 5px 8px;
+  font-weight: 800;
+}
+
+.root :global(.activity-icon) {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  border: var(--border);
+  font-weight: 900;
+}
+
+.root :global(.activity-icon.green) {
+  background: var(--green);
+}
+
+.root :global(.activity-icon.pink) {
+  background: var(--pink);
+}
+
+.root :global(.activity-icon.yellow) {
+  background: var(--yellow);
+}
+
+.root :global(.activity-icon.red) {
+  background: var(--red);
+  color: #fff;
+}
+
+.root :global(.invoice strong) {
+  font-size: 18px;
+}
+
+.root :global(.status) {
+  border: var(--border);
+  padding: 3px 6px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.root :global(.status.red) {
+  background: var(--red);
+  color: #fff;
+}
+
+.root :global(.status.yellow) {
+  background: var(--yellow);
+}
+
+.root :global(.status.green) {
+  background: var(--green);
+}
+
+.root :global(.date-box) {
+  width: 48px;
+  height: 50px;
+  border: var(--border);
+  background: var(--yellow);
+  text-align: center;
+  padding-top: 3px;
+  flex: none;
+}
+
+.root :global(.date-box b), .root :global(.date-box small) {
+  display: block;
+}
+
+.root :global(.date-box b) {
+  font: 700 30px/.8 var(--heading);
+}
+
+.root :global(.date-box small) {
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.root :global(.deliverable>span) {
+  border: var(--border);
+  padding: 3px 6px;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.root :global(.report>span) {
+  border: var(--border);
+  padding: 6px 5px;
+  font: 700 18px/.8 var(--heading);
+  background: var(--yellow);
+}
+
+.root :global(.report button), .root :global(.team-member button) {
+  background: transparent;
+  font-size: 24px;
+}
+
+.root :global(.message>span), .root :global(.team-member>span) {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: var(--border);
+  background: var(--yellow);
+  font-weight: 900;
+  flex: none;
+}
+
+.root :global(.message p) {
+  margin: 4px 0 0;
+  font-size: 15px;
+}
+
+.root :global(.message b small) {
+  display: inline;
+  margin-left: 8px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.root :global(.message>i) {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--yellow);
+  border: 1px solid var(--ink);
+}
+
+@media (max-width:1080px) {
+  .root :global(.dashboard-grid) {
+    grid-template-columns: 1fr;
+  }
+
+  .root :global(.side-column) {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .root :global(.attention) {
+    display: block;
+  }
+
+  .root :global(.attention-pills) {
+    justify-content: start;
+    margin-top: 17px;
+  }
+}
+
+@media (max-width:700px) {
+  .root :global(.welcome) {
+    padding: 35px 0 26px;
+  }
+
+  .root :global(.welcome-stamp) {
+    width: 73px;
+    height: 73px;
+    font-size: 28px;
+  }
+
+  .root :global(.welcome-stamp small) {
+    font-size: 7px;
+  }
+
+  .root :global(.welcome p) {
+    font-size: 17px;
+  }
+
+  .root :global(.attention) {
+    padding: 17px;
+  }
+
+  .root :global(.attention h2) {
+    font-size: 27px;
+  }
+
+  .root :global(.attention-pills) {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .root :global(.attention-pills span) {
+    font-size: 14px;
+  }
+
+  .root :global(.side-column) {
+    grid-template-columns: 1fr;
+  }
+
+  .root :global(.card-heading h2) {
+    font-size: 31px;
+  }
+
+  .root :global(.invoice) {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .root :global(.invoice strong) {
+    margin-left: auto;
+  }
+
+  .root :global(.invoice .status) {
+    margin-left: 40px;
+  }
+}
+
+.root :global(.welcome h1) {
+  margin: 0 0 10px;
+  color: #101820;
+  font: 700 24px/1 var(--heading);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.root :global(.welcome h1 em) {
+  color: #009cde;
+}
+
+.root :global(.welcome p) {
+  margin: 0;
+  color: #101820;
+  font: 500 16px/1 var(--body);
+}
+
+.root :global(.welcome p i) {
+  margin: 0 7px;
+  font-style: normal;
+}
+
+.root :global(.welcome-stamp) {
+  display: none;
+}
+
+.root :global(.attention) {
+  background: #ee2737;
+  border: 2px solid #101820;
+  border-radius: 8px;
+  box-shadow: 3px 3px 0 #101820;
+}
+
+.root :global(.attention) {
+  display: block;
+}
+
+.root :global(.attention-pills) {
+  justify-content: flex-start;
+  margin-top: 18px;
+}
+
+.root :global(.attention h2) {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #fdedee;
+  text-transform: none;
+}
+
+.root :global(.attention-alert) {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  object-fit: contain;
+}
+
+.root :global(.attention-pills button) {
+  padding: 6px 10px;
+  border: 1px solid #101820;
+  border-radius: 2px;
+  background: #e2e7ec;
+  color: #101820;
+  box-shadow: 1px 1px 0 #101820;
+  font: 500 16px/1 var(--body);
+}
+
+.root :global(.attention-pills b) {
+  font: 700 18px/1 var(--body);
+}
+
+.root :global(.dash-card) {
+  border-radius: 8px;
+}
+
+.root :global(.activity-list) {
+  display: grid;
+  gap: 24px;
+  padding: 20px 0;
+}
+
+.root :global(.activity-list .activity-item) {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  padding: 0;
+  border-bottom: 0;
+  color: #f2f2f2;
+}
+
+.root :global(.activity-entry) {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  padding: 0 20px;
+}
+
+.root :global(.activity-copy) {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.root :global(.activity-tag) {
+  display: inline-block;
+  flex: none;
+  padding: 2px 4px;
+  outline: .4px solid #101820;
+  border-radius: 2px;
+  box-shadow: 1px 1px 0 0 #101820;
+  color: #101820;
+  font: 500 8px/1.2 var(--body);
+  white-space: nowrap;
+}
+
+.root :global(.activity-date-tag) {
+  align-self: flex-start;
+  background: #f2f2f2;
+}
+
+.root :global(.invoice-list .invoice) {
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  padding: 7px 0;
+  border-bottom: 0;
+  color: #f2f2f2;
+}
+
+.root :global(.invoice-list .invoice-details) {
+  min-width: 0;
+}
+
+.root :global(.invoice-list .invoice-payment) {
+  flex: 0 0 auto;
+  margin-left: auto;
+  text-align: right;
+}
+
+.root :global(.invoice-payment strong) {
+  display: block;
+}
+
+.root :global(.report-list .report) {
+  padding: 7px 0;
+  border-bottom: 0;
+  color: #f2f2f2;
+}
+
+.root :global(.message-list .message > .message-avatar), .root :global(.team-list .team-member > .team-avatar) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  border-radius: 50%;
+  color: #101820;
+  line-height: 1;
+  text-align: center;
+}
+
+.root :global(.message-list .message > div) {
+  min-width: 0;
+}
+
+.root :global(.message-list .message) {
+  border-bottom: 0;
+}
+
+.root :global(.team-list .team-member) {
+  border-bottom: 0;
+}
+
+.root :global(.team-list .team-member > div) {
+  color: #101820;
+}
+
+.root :global(.message-list .message p) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.root :global(.attention-pills button) {
+  border-radius: 2px;
+}
+
+.root :global(.dashboard-grid) {
+  align-items: start;
+}
+
+.root :global(.main-column), .root :global(.side-column) {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+.root :global(.main-column > .dash-card), .root :global(.side-column > .dash-card) {
+  min-width: 0;
+}
+
+@media (max-width:1080px) {
+  .root :global(.dashboard-grid) {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .root :global(.main-column), .root :global(.side-column) {
+    display: contents;
+  }
+
+  .root :global(.dashboard-grid .dash-card) {
+    width: 100%;
+  }
+
+  .root :global(.main-column > :nth-child(1)) {
+    order: 1;
+  }
+
+  .root :global(.side-column > :nth-child(1)) {
+    order: 2;
+  }
+
+  .root :global(.main-column > :nth-child(2)) {
+    order: 3;
+  }
+
+  .root :global(.side-column > :nth-child(2)) {
+    order: 4;
+  }
+
+  .root :global(.side-column > :nth-child(3)) {
+    order: 5;
+  }
+
+  .root :global(.main-column > :nth-child(3)) {
+    order: 6;
+  }
+
+  .root :global(.side-column > :nth-child(4)) {
+    order: 7;
+  }
+
+  .root :global(.side-column > :nth-child(5)) {
+    order: 8;
+  }
+}
+
+.root :global(.services-dashboard-card) {
+  background: #02b180 !important;
+  color: #f2f2f2;
+}
+
+.root :global(.services-dashboard-card .card-heading) {
+  border-bottom: 0;
+  margin-bottom: 13px;
+  align-items: center;
+}
+
+.root :global(.services-dashboard-card .card-heading h2) {
+  color: #f2f2f2;
+  font: 700 24px/1 var(--heading);
+  text-transform: none;
+}
+
+.root :global(.services-title) {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.root :global(.services-title span) {
+  color: #f2f2f2;
+  font: 500 16px/1 var(--body);
+}
+
+.root :global(.services-view-all) {
+  padding: 7px 12px;
+  border: 1px solid #101820;
+  border-radius: 1px;
+  background: #ffd100;
+  color: #101820;
+  box-shadow: 1px 1px 0 #101820;
+  font: 500 16px/1 var(--body);
+}
+
+.root :global(.services-dashboard-card .progress-meta) {
+  font: 700 16px/1 var(--body);
+}
+
+.root :global(.services-dashboard-card .progress-meta b), .root :global(.services-dashboard-card .progress-meta span) {
+  color: #f2f2f2;
+  font: 700 16px/1 var(--body);
+}
+
+.root :global(.services-dashboard-card .progress-track) {
+  height: 12px;
+  border: 1px solid #101820;
+  border-radius: 3px;
+  box-shadow: 1px 1px 0 #101820;
+  background: #f2f2f2;
+}
+
+.root :global(.services-dashboard-card .progress-track i) {
+  background: #009cde;
+  border-right: 0;
+}
+
+.root :global(.dash-card .card-heading) {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 17px;
+}
+
+.root :global(.dash-card .card-eyebrow) {
+  display: none;
+}
+
+.root :global(.dash-card .card-heading h2) {
+  color: #f2f2f2;
+  font: 700 24px/1 var(--heading);
+  text-transform: none;
+}
+
+.root :global(.dash-card .card-subtitle) {
+  margin: 6px 0 0;
+  color: #f2f2f2;
+  font: 500 16px/1.2 var(--body);
+}
+
+.root :global(.dash-card .card-action) {
+  padding: 7px 12px;
+  border: 1px solid #101820;
+  border-radius: 1px;
+  background: #ffd100;
+  color: #101820;
+  box-shadow: 1px 1px 0 #101820;
+  font: 500 16px/1 var(--body);
+}
+
+.root :global(.dash-card .card-action span) {
+  display: none;
+}
+
+.root :global(.approval-list) {
+  color: #f2f2f2;
+}
+
+.root :global(.approval-item) {
+  border-bottom: 0;
+  padding: 12px 0;
+  gap: 0;
+}
+
+.root :global(.approval-item > div) {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.root :global(.approval-mark), .root :global(.approval-item .view-button) {
+  display: none;
+}
+
+.root :global(.approval-item b) {
+  color: #f2f2f2;
+  font: 700 16px/1 var(--body);
+}
+
+.root :global(.approval-item small) {
+  color: #f2f2f2;
+  font: 500 12px/1.2 var(--body);
+}
+
+.root :global(.approval-item small) {
+  font-size: 0;
+}
+
+.root :global(.approval-item small::after) {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  font: 500 12px/1.2 var(--body);
+  color: #f2f2f2;
+}
+
+.root :global(.approval-item:nth-child(1) small::after) {
+  content: 'V 1.2 | 2 days ago';
+}
+
+.root :global(.approval-item:nth-child(2) small::after) {
+  content: 'V 1.1 | 4 days ago';
+}
+
+.root :global(.approval-item:nth-child(3) small::after) {
+  content: 'V 1.0 | 6 days ago';
+}

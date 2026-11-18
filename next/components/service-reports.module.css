@@ -1,0 +1,85 @@
+.panel {
+  padding: 20px;
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+  background: var(--blue);
+  color: #f2f2f2;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.heading h2 {
+  margin: 0 0 4px;
+  font: 700 24px/1 var(--heading);
+  text-transform: none;
+}
+
+.heading p {
+  margin: 0;
+  font: 500 14px/1.2 var(--body);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.report {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.copy {
+  min-width: 0;
+}
+
+.copy h3 {
+  margin: 0 0 4px;
+  font: 700 16px/1.2 var(--body);
+}
+
+.copy p {
+  margin: 0;
+  font: 500 10px/1.3 var(--body);
+}
+
+.download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  gap: 5px;
+  padding: 6px 10px;
+  border: .5px solid var(--ink);
+  border-radius: 2px;
+  background: var(--green);
+  color: var(--ink);
+  box-shadow: 1px 1px 0 var(--ink);
+  font: 700 12px/1.2 var(--body);
+  text-decoration: none;
+}
+
+.download:hover {
+  background: #00c18b;
+}
+
+.download:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  .panel {
+    padding: 16px;
+  }
+
+  .report {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { PortalShell } from './portal-shell';
+import styles from './onboarding-gate.module.css';
 
 function OnboardingModal({ step, onClose, onContinue }: { step: number; onClose: () => void; onContinue: () => void }) {
   return <div className="onboarding-backdrop" role="dialog" aria-modal="true" aria-labelledby="onboarding-title">
@@ -20,5 +21,5 @@ export function OnboardingGate() {
   const [open, setOpen] = useState(true);
   const [step, setStep] = useState(1);
   const continueTour = () => step === 5 ? setOpen(false) : setStep(current => current + 1);
-  return <div className="onboarding-host"><div className={open ? 'dashboard-obscured' : ''}><PortalShell mode="workspace" /></div>{open && <OnboardingModal step={step} onClose={() => setOpen(false)} onContinue={continueTour} />}</div>;
+  return <div className={`onboarding-host ${styles.root}`}><div className={open ? 'dashboard-obscured' : ''}><PortalShell mode="workspace" /></div>{open && <OnboardingModal step={step} onClose={() => setOpen(false)} onContinue={continueTour} />}</div>;
 }

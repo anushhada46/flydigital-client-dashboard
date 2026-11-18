@@ -1,0 +1,170 @@
+.shell {
+  min-height: 100vh;
+  background: #f2f2f2;
+}
+
+.main {
+  padding: 64px 0 48px;
+}
+
+.intro {
+  margin-bottom: 24px;
+}
+
+.intro h1 {
+  margin: 0 0 6px;
+  font: 700 24px/1 var(--heading);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.intro p {
+  margin: 0;
+  font: 500 16px/1.2 var(--body);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 24px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 24px;
+}
+
+.card {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid #101820;
+  border-radius: 2px;
+  box-shadow: 3px 3px 0 #101820;
+  color: #f2f2f2;
+  scroll-margin-top: 24px;
+}
+
+.blue {
+  background: #009cde;
+}
+
+.green {
+  background: #02b180;
+}
+
+.pink {
+  background: #f04e98;
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.card h2 {
+  margin: 0;
+  min-width: 0;
+  font: 700 24px/1 var(--heading);
+  text-transform: none;
+}
+
+.description {
+  margin: 5px 0 0;
+  font: 500 16px/1.1 var(--body);
+}
+
+.status {
+  margin: 7px 0 0;
+  font: 500 10px/1.2 var(--body);
+  text-transform: uppercase;
+}
+
+.status span {
+  margin: 0 3px;
+}
+
+.detailsButton {
+  text-decoration: none;
+  flex: none;
+  margin-top: 2px;
+  padding: 2px 4px;
+  border: .4px solid #101820;
+  border-radius: 2px;
+  background: #ffd100;
+  color: #101820;
+  box-shadow: 1px 1px 0 #101820;
+  font: 500 8px/1.2 var(--body);
+  cursor: pointer;
+}
+
+.detailsButton:not(:disabled):hover {
+  background: #fff0a6;
+}
+
+.detailsButton:focus-visible {
+  outline: 2px solid #101820;
+  outline-offset: 3px;
+}
+
+.card:target {
+  outline: 2px solid #101820;
+  outline-offset: 5px;
+}
+
+.detailsButton:disabled {
+  cursor: default;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 1080px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .column {
+    display: contents;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .column:first-child > :first-child {
+    order: 1;
+  }
+
+  .column:last-child > :first-child {
+    order: 2;
+  }
+
+  .column:first-child > :last-child {
+    order: 3;
+  }
+
+  .column:last-child > :last-child {
+    order: 4;
+  }
+}
+
+@media (max-width: 700px) {
+  .main {
+    padding-top: 36px;
+  }
+}

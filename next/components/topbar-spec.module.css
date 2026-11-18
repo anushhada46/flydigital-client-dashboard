@@ -1,0 +1,172 @@
+.root :global(.top-avatar) {
+  border: var(--border);
+  display: grid;
+  place-items: center;
+  background: var(--blue);
+  font-weight: 800;
+}
+
+.root {
+  height: 86px;
+  border-bottom: var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.root :global(.crumb) {
+  font-size: 15px;
+}
+
+.root :global(.crumb span) {
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.root :global(.crumb b) {
+  margin-left: 12px;
+}
+
+.root :global(.top-actions) {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.root :global(.search) {
+  width: 310px;
+  height: 42px;
+  border: var(--border);
+  background: var(--white);
+  box-shadow: 3px 3px 0 var(--ink);
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  gap: 8px;
+}
+
+.root :global(.search span) {
+  font-size: 27px;
+  line-height: 0;
+  transform: rotate(-20deg);
+}
+
+.root :global(.search input) {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  width: 100%;
+  font-size: 16px;
+}
+
+.root :global(.notification) {
+  position: relative;
+  background: transparent;
+  font-size: 29px;
+  line-height: 1;
+}
+
+.root :global(.notification span) {
+  position: absolute;
+  top: -10px;
+  right: -11px;
+  background: var(--red);
+  color: #fff;
+  border: var(--border);
+  font: 700 12px var(--body);
+  padding: 2px 5px;
+}
+
+.root :global(.top-avatar) {
+  width: 40px;
+  height: 40px;
+  background: var(--pink);
+  font-size: 14px;
+}
+
+@media (max-width:700px) {
+  .root {
+    height: auto;
+    min-height: 70px;
+    gap: 10px;
+  }
+
+  .root :global(.crumb) {
+    display: none;
+  }
+
+  .root :global(.top-actions) {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .root :global(.search) {
+    flex: 1;
+    width: auto;
+  }
+}
+
+.root :global(.notification) {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background: transparent;
+  font-size: 0;
+}
+
+.root :global(.notification img) {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
+.root :global(.search) {
+  border: 2px solid #101820;
+  border-radius: 1px;
+  background: #e2e7ec;
+  box-shadow: 3px 3px 0 #101820;
+}
+
+.root :global(.search) {
+  border-radius: 2px;
+  align-items: center;
+}
+
+.root :global(.search > span) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  line-height: 1;
+}
+
+.root :global(.search input) {
+  height: 100%;
+  line-height: 1;
+}
+
+.root {
+  border-bottom: 0;
+}
+
+.root :global(.notification span) {
+  width: 20px;
+  height: 20px;
+  top: -7px;
+  right: -8px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.root :global(.notification span) {
+  line-height: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.root :global(.search) {
+  border-radius: 2px;
+}

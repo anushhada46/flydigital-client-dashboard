@@ -1,0 +1,427 @@
+.root {
+  background: var(--yellow);
+  border-right: var(--border);
+  width: 278px;
+  flex: 0 0 278px;
+  min-height: 100vh;
+  padding: 28px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.root :global(.brand) {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 11px 27px;
+}
+
+.root :global(.brand-mark) {
+  width: 41px;
+  height: 41px;
+  border: var(--border);
+  background: var(--ink);
+  color: var(--yellow);
+  display: grid;
+  place-items: center;
+  font: 700 34px/1 var(--heading);
+  transform: rotate(-5deg);
+}
+
+.root :global(.brand strong) {
+  display: block;
+  font: 700 32px/0.72 var(--heading);
+  letter-spacing: .5px;
+}
+
+.root :global(.brand small), .root :global(.client-switcher span) {
+  display: block;
+  font: 700 11px/1 var(--body);
+  letter-spacing: 1.4px;
+}
+
+.root :global(.brand small) {
+  margin-top: 9px;
+}
+
+.root :global(.client-switcher) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 11px;
+  border: var(--border);
+  background: var(--white);
+  box-shadow: var(--shadow);
+  margin-bottom: 25px;
+}
+
+.root :global(.client-avatar), .root :global(.profile-avatar) {
+  border: var(--border);
+  display: grid;
+  place-items: center;
+  background: var(--blue);
+  font-weight: 800;
+}
+
+.root :global(.client-avatar) {
+  width: 36px;
+  height: 36px;
+}
+
+.root :global(.client-switcher>div:nth-child(2)) {
+  min-width: 0;
+}
+
+.root :global(.client-switcher span) {
+  font-size: 9px;
+}
+
+.root :global(.client-switcher b), .root :global(.client-switcher small) {
+  display: block;
+}
+
+.root :global(.client-switcher b) {
+  font-size: 17px;
+  line-height: 1.1;
+  margin-top: 4px;
+}
+
+.root :global(.client-switcher small) {
+  font-size: 14px;
+}
+
+.root :global(.switcher-chevron) {
+  margin-left: auto;
+  font-size: 22px !important;
+}
+
+.root :global(.main-nav) {
+  display: grid;
+  gap: 4px;
+}
+
+.root :global(.nav-link) {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 9px 10px;
+  min-height: 39px;
+  background: transparent;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.root :global(.nav-link:hover), .root :global(.nav-link.active) {
+  background: var(--blue);
+  color: #fff;
+  border: var(--border);
+  box-shadow: var(--shadow);
+  padding: 7px 8px;
+}
+
+.root :global(.services-toggle) {
+  width: 100%;
+}
+
+.root :global(.nav-chevron), .root :global(.nav-badge) {
+  margin-left: auto;
+}
+
+.root :global(.nav-badge) {
+  background: var(--red);
+  color: #fff;
+  border: 1px solid var(--ink);
+  padding: 1px 6px;
+  font-size: 12px;
+}
+
+.root :global(.subnav) {
+  display: grid;
+  padding: 0 0 5px 42px;
+  gap: 2px;
+}
+
+.root :global(.subnav a) {
+  font-size: 14px;
+  text-decoration: none;
+  padding: 4px 0;
+}
+
+.root :global(.subnav a:hover) {
+  text-decoration: underline;
+}
+
+.root :global(.sidebar-profile) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  border-top: var(--border);
+  padding: 18px 8px 0;
+}
+
+.root :global(.profile-avatar) {
+  width: 38px;
+  height: 38px;
+  background: var(--pink);
+}
+
+.root :global(.sidebar-profile b), .root :global(.sidebar-profile small) {
+  display: block;
+}
+
+.root :global(.sidebar-profile b) {
+  font-size: 17px;
+}
+
+.root :global(.sidebar-profile small) {
+  font-size: 14px;
+}
+
+.root :global(.profile-more) {
+  margin-left: auto;
+  font-weight: 800;
+}
+
+@media (max-width:1080px) {
+  .root {
+    width: 235px;
+    flex-basis: 235px;
+  }
+}
+
+@media (max-width:700px) {
+  .root {
+    position: static;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    border-right: 0;
+    border-bottom: var(--border);
+    padding: 16px;
+  }
+
+  .root :global(.brand) {
+    padding-bottom: 18px;
+  }
+
+  .root :global(.client-switcher) {
+    margin-bottom: 14px;
+  }
+
+  .root :global(.main-nav) {
+    display: flex;
+    overflow: auto;
+    gap: 5px;
+  }
+
+  .root :global(.nav-link) {
+    white-space: nowrap;
+  }
+
+  .root :global(.subnav), .root :global(.services-toggle~.subnav) {
+    display: none;
+  }
+
+  .root :global(.sidebar-profile) {
+    display: none;
+  }
+}
+
+.root {
+  --sidebar-pad: 18px;
+  position: sticky;
+  top: auto;
+  bottom: 0;
+  height: fit-content;
+  min-height: 0;
+  align-self: flex-end;
+  padding-bottom: 0;
+  background: #ffd100;
+  border: 1px solid #101820;
+  border-left: 0;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 3px 3px 0 #101820;
+}
+
+.root :global(.brand), .root :global(.client-switcher), .root :global(.main-nav), .root :global(.active-services) {
+  position: relative;
+  border-bottom: 0;
+}
+
+.root :global(.brand::after), .root :global(.client-switcher::after), .root :global(.main-nav::after), .root :global(.active-services::after) {
+  content: '';
+  position: absolute;
+  right: calc(-1 * var(--sidebar-pad));
+  bottom: 0;
+  left: calc(-1 * var(--sidebar-pad));
+  border-bottom: 1px solid #101820;
+}
+
+.root :global(.brand) {
+  align-items: center;
+  gap: 12px;
+  padding: 0 11px 20px;
+}
+
+.root :global(.brand img) {
+  width: 47px;
+  height: 47px;
+  flex: none;
+}
+
+.root :global(.brand strong) {
+  color: #101820;
+  font: 700 24px/1 var(--heading);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.root :global(.brand small) {
+  color: #101820;
+  font: 500 16px/1 var(--body);
+  letter-spacing: 0;
+  margin-top: 5px;
+  text-transform: none;
+}
+
+.root :global(.client-switcher) {
+  gap: 11px;
+  padding: 20px 11px;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.root :global(.client-avatar) {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #101820;
+  border-radius: 50%;
+  background: #009cde;
+  box-shadow: 1px 1px 0 #101820;
+  font-size: 14px;
+}
+
+.root :global(.client-avatar) {
+  line-height: 1;
+  text-align: center;
+}
+
+.root :global(.client-switcher b) {
+  color: #101820;
+  font: 700 24px/1 var(--heading);
+}
+
+.root :global(.client-switcher small) {
+  color: #101820;
+  font: 500 16px/1 var(--body);
+  margin-top: 4px;
+}
+
+.root :global(.main-nav) {
+  gap: 5px;
+  padding: 20px 0;
+}
+
+.root :global(.nav-link) {
+  min-height: 38px;
+  padding: 8px 10px;
+  color: #101820;
+  border: 1px solid transparent;
+  font: 500 17px/1 var(--body);
+}
+
+.root :global(.nav-link:hover), .root :global(.nav-link.active) {
+  padding: 8px 10px;
+  border: 1px solid #101820;
+  border-radius: 4px;
+  box-shadow: 1px 1px 0 #101820;
+  background: #009cde;
+  color: #fff;
+}
+
+.root :global(.active-services) {
+  display: grid;
+  gap: 5px;
+  padding: 20px 0;
+}
+
+.root :global(.active-services h2) {
+  margin: 0 0 7px;
+  color: #101820;
+  font: 700 24px/1 var(--heading);
+  text-transform: none;
+}
+
+.root :global(.active-services a) {
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  color: #101820;
+  text-decoration: none;
+  font: 500 16px/1.1 var(--body);
+}
+
+.root :global(.active-services a:hover), .root :global(.active-services a.active) {
+  border: 1px solid #101820;
+  border-radius: 4px;
+  background: #00b180;
+  box-shadow: 1px 1px 0 #101820;
+}
+
+.root :global(.sidebar-profile) {
+  margin-top: 0;
+  border-top: 0;
+  padding: 18px 8px;
+  color: #101820;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.root :global(.sidebar-profile:hover .profile-avatar), .root :global(.sidebar-profile:focus-visible .profile-avatar) {
+  box-shadow: 2px 2px 0 #101820;
+}
+
+@media (max-width:700px) {
+  .root {
+    --sidebar-pad: 16px;
+  }
+}
+
+.root.fullHeight {
+  min-height: 100vh;
+  align-self: flex-start;
+  top: 0;
+  bottom: auto;
+}
+
+.root :global(.nav-link:focus),
+.root :global(.active-services a:focus),
+.root :global(.sidebar-profile:focus) {
+  outline: none;
+}
+
+.root :global(.nav-link:focus-visible),
+.root :global(.active-services a:focus-visible),
+.root :global(.sidebar-profile:focus-visible) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.root.fullHeight :global(.sidebar-profile) {
+  margin-top: auto;
+}
+
+@media (max-width:700px) {
+  .root.fullHeight {
+    min-height: 0;
+    position: static;
+  }
+}

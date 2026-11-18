@@ -1,0 +1,163 @@
+.root {
+  min-height: 100vh;
+  position: relative;
+}
+
+.root :global(.dashboard-obscured) {
+  filter: blur(2px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.root :global(.onboarding-backdrop) {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(16,24,32,.3);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.root :global(.onboarding-modal) {
+  position: relative;
+  width: min(100%,560px);
+  background: var(--yellow);
+  border: var(--border);
+  border-radius: 12px;
+  box-shadow: 6px 6px 0 var(--ink);
+  padding: 42px 44px 34px;
+}
+
+.root :global(.onboarding-close) {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 35px;
+  height: 35px;
+  background: var(--red);
+  border: var(--border);
+  border-radius: 6px;
+  box-shadow: 3px 3px 0 var(--ink);
+  font: 700 27px/25px var(--body);
+}
+
+.root :global(.onboarding-kicker) {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 1.7px;
+  font-weight: 800;
+  margin-bottom: 17px;
+}
+
+.root :global(.onboarding-modal h2) {
+  font: 700 42px/.9 var(--body);
+  text-transform: none;
+  margin: 0 0 12px;
+}
+
+.root :global(.onboarding-modal h2 strong) {
+  font-weight: 800;
+}
+
+.root :global(.onboarding-modal>p) {
+  font: 500 26px/1.05 var(--body);
+  margin: 0 0 33px;
+}
+
+.root :global(.onboarding-progress) {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 35px;
+}
+
+.root :global(.progress-dots) {
+  display: flex;
+  gap: 8px;
+}
+
+.root :global(.progress-dots span) {
+  width: 13px;
+  height: 13px;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: transparent;
+}
+
+.root :global(.progress-dots span.active) {
+  background: var(--ink);
+}
+
+.root :global(.onboarding-note) {
+  font: 600 18px var(--body);
+  transform: rotate(-3deg);
+}
+
+.root :global(.onboarding-note b) {
+  font-size: 21px;
+}
+
+.root :global(.onboarding-actions) {
+  display: flex;
+  justify-content: flex-end;
+  gap: 13px;
+}
+
+.root :global(.skip-tour), .root :global(.continue-tour) {
+  border: var(--border);
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 var(--ink);
+  padding: 8px 24px;
+  font: 700 21px var(--body);
+  transition: transform .15s ease,box-shadow .15s ease;
+}
+
+.root :global(.skip-tour) {
+  background: #FCA1B9;
+}
+
+.root :global(.continue-tour) {
+  background: var(--green);
+}
+
+.root :global(.skip-tour:hover), .root :global(.continue-tour:hover) {
+  transform: translate(-1px,-1px);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.root :global(.skip-tour:active), .root :global(.continue-tour:active) {
+  transform: translate(2px,2px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+
+@media (max-width:600px) {
+  .root :global(.onboarding-modal) {
+    padding: 37px 23px 25px;
+  }
+
+  .root :global(.onboarding-modal h2) {
+    font-size: 37px;
+  }
+
+  .root :global(.onboarding-modal>p) {
+    font-size: 23px;
+  }
+
+  .root :global(.onboarding-progress) {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .root :global(.onboarding-actions) {
+    justify-content: stretch;
+  }
+
+  .root :global(.skip-tour), .root :global(.continue-tour) {
+    flex: 1;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}

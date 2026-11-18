@@ -1,0 +1,44 @@
+.periods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.period {
+  padding: 4px 10px;
+  border: 1px solid var(--ink);
+  border-radius: 1px;
+  background: #f2f2f2;
+  color: var(--ink);
+  font: 500 12px/1.2 var(--body);
+  text-transform: uppercase;
+}
+
+.period[aria-selected='true'] {
+  background: var(--yellow);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+
+.period:hover {
+  box-shadow: 1px 1px 0 var(--ink);
+}
+
+.period:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.panel {
+  padding: 20px;
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+  background: var(--blue);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+@media (max-width: 700px) {
+  .panel {
+    padding: 16px;
+  }
+}

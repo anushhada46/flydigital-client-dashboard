@@ -1,0 +1,252 @@
+.shell {
+  min-height: 100vh;
+  background: #f2f2f2;
+}
+
+.main {
+  padding: 64px 0 48px;
+}
+
+.title {
+  margin: 0 0 28px;
+  font: 700 24px/1 var(--heading);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 28px;
+}
+
+.filter {
+  padding: 4px 9px;
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+  box-shadow: 2px 2px 0 var(--ink);
+  font: 500 14px/1.2 var(--body);
+}
+
+.filter[aria-pressed='true'] {
+  font-weight: 800;
+}
+
+.filter:focus {
+  outline: none;
+}
+
+.filter:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.pink {
+  background: var(--pink);
+}
+
+.green {
+  background: var(--green);
+}
+
+.blue {
+  background: var(--blue);
+}
+
+.yellow {
+  background: var(--yellow);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 24px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+.card {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+  box-shadow: 3px 3px 0 var(--ink);
+  color: #f2f2f2;
+  text-align: left;
+}
+
+.card:hover {
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.card:focus-visible,
+.dialog button:focus-visible,
+.dialog textarea:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 5px;
+}
+
+.artwork {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 166 / 130;
+  overflow: hidden;
+  border: 1px solid var(--ink);
+  background: #e2e7ec;
+}
+
+.cardCopy {
+  padding: 10px 6px 2px;
+}
+
+.cardCopy h2 {
+  margin: 0 0 4px;
+  font: 700 24px/1 var(--heading);
+  text-transform: none;
+  overflow-wrap: anywhere;
+}
+
+.cardCopy p {
+  margin: 2px 0 0;
+  font: 500 11px/1.2 var(--body);
+  text-transform: uppercase;
+}
+
+.notice {
+  margin: 0;
+}
+
+.notice:not(:empty) {
+  margin-bottom: 20px;
+}
+
+.empty {
+  padding: 32px 0;
+}
+
+.dialog {
+  width: min(600px, calc(100% - 32px));
+  max-height: calc(100dvh - 48px);
+  padding: 24px;
+  overflow-y: auto;
+  border: 2px solid var(--ink);
+  border-radius: 4px;
+  box-shadow: 5px 5px 0 var(--ink);
+  background: #f2f2f2;
+  color: var(--ink);
+}
+
+.dialog::backdrop {
+  background: rgb(16 24 32 / 65%);
+}
+
+.dialogHeading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.dialogHeading h2 {
+  margin: 0;
+  font: 700 28px/1.1 var(--heading);
+  text-transform: none;
+}
+
+.dialogHeading button {
+  padding: 0 8px;
+  background: var(--yellow);
+  border: 1px solid var(--ink);
+  font: 24px/1.2 Arial, sans-serif;
+}
+
+.metadata {
+  font-weight: 700;
+}
+
+.dialog label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.dialog textarea {
+  width: 100%;
+  min-height: 90px;
+  padding: 10px;
+  resize: vertical;
+  border: 1px solid var(--ink);
+  font: inherit;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.actions button {
+  padding: 8px 14px;
+  border: 1px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
+  font-weight: 700;
+}
+
+.actions button:disabled {
+  opacity: .55;
+  cursor: default;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .filters {
+    gap: 16px;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .column {
+    display: contents;
+  }
+
+  .card {
+    order: 2;
+  }
+
+  .column:first-child .card:first-child {
+    order: 0;
+  }
+
+  .column:last-child .card:first-child {
+    order: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  .main {
+    padding-top: 36px;
+  }
+}
