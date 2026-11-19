@@ -1,0 +1,11 @@
+UI Design Presentation - V2
+ABC Restaurant | FlyDigital
+September 21, 2026 | Dipak Maharjan
+
+Sample project document for the portal prototype.
+
+Updated direction: refined brand colors, improved mobile navigation, and larger food photography.
+
+Homepage design V2 is awaiting client feedback.
+
+Next step: approve the direction before implementation.

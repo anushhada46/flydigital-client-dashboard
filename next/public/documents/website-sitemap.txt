@@ -1,0 +1,14 @@
+Website Sitemap
+ABC Restaurant | FlyDigital
+September 13, 2026 | Dipak Maharjan
+
+Sample project document for the portal prototype.
+
+Home
+About ABC Restaurant
+Menu
+Gallery
+Reservations
+Contact
+
+Next step: review the page structure before wireframes begin.

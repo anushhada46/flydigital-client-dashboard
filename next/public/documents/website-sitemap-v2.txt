@@ -1,0 +1,15 @@
+Website Sitemap - V2
+ABC Restaurant | FlyDigital
+September 21, 2026 | Dipak Maharjan
+
+Sample project document for the portal prototype.
+
+Home
+About ABC Restaurant
+Menu
+Gallery
+Reservations
+Private Events
+Contact
+
+Revision: added a dedicated Private Events page.

@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import styles from './sidebar-spec.module.css';
 
-const menuItems = ['Dashboard', 'My Services', 'Approvals', 'Performance', 'Reports', 'Files', 'Message', 'Requests', 'Billing', 'Account'];
+const menuItems = ['Dashboard', 'My Services', 'Approvals', 'Performance', 'Reports', 'Files', 'Messages', 'Requests', 'Billing', 'Account'];
 const activeServices = ['Social Media Marketing', 'SEO', 'PPC / Google Ads', 'Influencer Marketing'];
 const serviceIds = ['social-media-marketing', 'seo', 'ppc-google-ads', 'influencer-marketing'];
 
@@ -13,6 +13,9 @@ function menuHref(label: string) {
   if (label === 'Dashboard') return '/';
   if (label === 'My Services') return '/services';
   if (label === 'Approvals') return '/approvals';
+  if (label === 'Reports') return '/reports';
+  if (label === 'Files') return '/files';
+  if (label === 'Messages') return '/messages';
   return `/#${label.toLowerCase().replaceAll(' ', '-')}`;
 }
 
@@ -22,6 +25,9 @@ function serviceHref(index: number) {
 
 function defaultSelection(pathname: string) {
   if (pathname === '/approvals') return 'menu:Approvals';
+  if (pathname === '/reports') return 'menu:Reports';
+  if (pathname === '/files') return 'menu:Files';
+  if (pathname === '/messages') return 'menu:Messages';
   if (pathname === '/services/social-media-marketing') return 'service:Social Media Marketing';
   return pathname === '/services' ? 'menu:My Services' : 'menu:Dashboard';
 }
@@ -32,7 +38,7 @@ export function Sidebar({ fullHeight = false }: { fullHeight?: boolean }) {
 
   useEffect(() => {
     const syncSelection = () => {
-      if (pathname === '/approvals') {
+      if (['/approvals', '/reports', '/files', '/messages'].includes(pathname)) {
         setSelectedItem(defaultSelection(pathname));
         return;
       }

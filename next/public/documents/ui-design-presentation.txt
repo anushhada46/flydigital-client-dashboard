@@ -1,0 +1,11 @@
+UI Design Presentation
+ABC Restaurant | FlyDigital
+September 13, 2026 | Dipak Maharjan
+
+Sample project document for the portal prototype.
+
+Design direction: bold restaurant photography, clear menu navigation, and prominent reservation actions.
+
+Screens planned: homepage, menu, gallery, reservations, and contact.
+
+Next step: review the visual direction.

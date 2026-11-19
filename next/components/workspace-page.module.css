@@ -1,0 +1,30 @@
+.shell {
+  min-height: 100vh;
+  background: #f2f2f2;
+}
+
+.main {
+  padding: 64px 0 48px;
+}
+
+.intro {
+  margin-bottom: 24px;
+}
+
+.intro h1 {
+  margin: 0 0 6px;
+  font: 700 24px/1 var(--heading);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.intro p {
+  margin: 0;
+  font: 500 16px/1.2 var(--body);
+}
+
+@media (max-width: 700px) {
+  .main {
+    padding-top: 36px;
+  }
+}

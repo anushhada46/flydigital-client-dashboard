@@ -1,0 +1,12 @@
+Website Content Sheet
+ABC Restaurant | FlyDigital
+September 13, 2026 | Dipak Maharjan
+
+Sample project document for the portal prototype.
+
+Page | Required content | Status
+Home | Welcome copy and hero photography | In review
+About | Restaurant story and team | Draft
+Menu | Dishes, prices, and descriptions | Awaiting input
+Reservations | Booking instructions | Draft
+Contact | Address, opening hours, and contact details | Awaiting input
