@@ -7,14 +7,13 @@ const approvals = [
     version: 'V 1.2',
     service: 'Social Media Marketing',
     updated: '2h ago',
-    description: 'Festive menu creative prepared for your review before publishing.',
   },
 ];
 
 export const pendingApprovalCount = approvals.length;
 
-function CreativePreview({ large = false }: { large?: boolean }) {
-  return <svg className={large ? styles.largePreview : styles.thumbnail} viewBox="0 0 120 120" role="img" aria-label="Festive menu promotional creative preview">
+function CreativePreview() {
+  return <svg className={styles.thumbnail} viewBox="0 0 120 120" role="img" aria-label="Festive menu promotional creative preview">
     <rect width="120" height="120" fill="#173d36" />
     <path d="M0 0H120V28L0 60Z" fill="#f04e98" />
     <text x="9" y="17" fill="#fffdf5" fontFamily="Arial, sans-serif" fontSize="10" fontWeight="700">FESTIVE MENU</text>
@@ -35,20 +34,14 @@ export function ServiceApprovals() {
       <p>{pendingApprovalCount} awaiting your review</p>
     </header>
     <ul className={styles.list}>{approvals.map(approval => <li key={approval.id}>
-      <details className={styles.approval}>
-        <summary className={styles.row}>
-          <CreativePreview />
-          <div className={styles.copy}>
-            <h3>{approval.title}</h3>
-            <p>{approval.version} <span aria-hidden="true">|</span> {approval.service} <span aria-hidden="true">|</span> {approval.updated}</p>
-          </div>
-          <span className={styles.detailsControl}>View Details</span>
-        </summary>
-        <div className={styles.detailsContent}>
-          <CreativePreview large />
-          <div><h4>{approval.title}</h4><p>{approval.description}</p><p>{approval.version} · Awaiting client review</p></div>
+      <div className={styles.row}>
+        <CreativePreview />
+        <div className={styles.copy}>
+          <h3>{approval.title}</h3>
+          <p>{approval.version} <span aria-hidden="true">|</span> {approval.service} <span aria-hidden="true">|</span> {approval.updated}</p>
         </div>
-      </details>
+        <span className={styles.reviewStatus}>Awaiting review</span>
+      </div>
     </li>)}</ul>
   </section>;
 }
