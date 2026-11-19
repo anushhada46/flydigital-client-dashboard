@@ -26,11 +26,6 @@
   text-underline-offset: 3px;
 }
 
-.fileAction:focus-visible {
-  outline: 3px solid var(--ink);
-  outline-offset: 4px;
-}
-
 .yellow {
   background: var(--yellow);
 }

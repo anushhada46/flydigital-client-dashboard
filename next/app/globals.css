@@ -23,6 +23,14 @@
   box-sizing: border-box;
 }
 
+/* Project-wide preference: focused controls never show an outline. */
+:focus,
+:focus-visible,
+:focus::before,
+:focus::after {
+  outline: none !important;
+}
+
 html {
   scroll-behavior: smooth;
 }

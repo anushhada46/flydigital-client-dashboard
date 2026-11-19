@@ -68,11 +68,6 @@
   background: #00c18b;
 }
 
-.download:focus-visible {
-  outline: 2px solid var(--ink);
-  outline-offset: 3px;
-}
-
 @media (max-width: 700px) {
   .panel {
     padding: 16px;

@@ -47,11 +47,6 @@
   outline: none;
 }
 
-.openRequest:focus-visible::after {
-  outline: 2px solid var(--ink);
-  outline-offset: 4px;
-}
-
 .card:hover {
   background: #e8edf0;
 }
@@ -278,11 +273,6 @@
 .submit {
   padding: 12px 18px;
   font-size: 26px;
-}
-
-.newRequest:focus-visible, .form button:not(.priority):focus-visible, .close:focus-visible, .deleteRequest:focus-visible {
-  outline: 2px solid var(--ink);
-  outline-offset: 4px;
 }
 
 .form input:focus, .form textarea:focus, .form select:focus {

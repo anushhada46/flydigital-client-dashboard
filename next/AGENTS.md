@@ -4,6 +4,10 @@ Use independent vertical card stacks for desktop columns throughout this project
 
 When columns collapse on smaller screens, use one stack in this order: Active Services, Pending Approvals, Recent Activity, Billing, Recent Reports, Upcoming Deliverables, Latest Messages, Your Fly Team. Preserve the existing desktop placement: services/activity/deliverables on the left; approvals/billing/reports/messages/team on the right.
 
+## Focus styling
+
+Do not add focus outlines or box-shadow focus rings on any page, including new pages. Keep the shared focus-outline reset in `app/globals.css`. Preserve keyboard focus behavior; use non-outline styling such as text underlines when needed.
+
 ## Stylesheet organization
 
 Keep component-specific styles in a matching, colocated `*.module.css` file, imported by its owning component. This includes sidebar, top bar, dashboard, onboarding, and services styles. `app/globals.css` is reserved for shared design tokens, resets, typography, and application layout foundations.

@@ -52,11 +52,6 @@
   background: #e5ebee;
 }
 
-.conversation:focus-visible, .composer button:focus-visible, .composer textarea:focus-visible {
-  outline: 3px solid var(--blue);
-  outline-offset: -3px;
-}
-
 .avatar {
   display: inline-grid;
   flex: 0 0 28px;

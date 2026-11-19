@@ -1,0 +1,179 @@
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 24px;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+.card {
+  padding: 16px;
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+  box-shadow: 3px 3px 0 var(--ink);
+  background: #f2f2f2;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.cardHeader h2 {
+  margin: 0;
+  font: 700 24px/1 var(--heading);
+  text-transform: none;
+}
+
+.edit,
+.actions button {
+  padding: 4px 10px;
+  border: var(--nav-pill-border);
+  border-radius: var(--nav-pill-radius);
+  box-shadow: var(--nav-pill-shadow);
+  font: 700 14px/1.2 var(--body);
+}
+
+.edit {
+  background: var(--yellow);
+}
+
+.identity,
+.member {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.identity > div,
+.member > div {
+  min-width: 0;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  background: var(--green);
+  color: white;
+  font: 700 12px/1 var(--body);
+}
+
+.identity h3,
+.member h3 {
+  margin: 0;
+  font: 700 16px/1.1 var(--body);
+  overflow-wrap: anywhere;
+}
+
+.identity p,
+.member p {
+  margin: 2px 0 0;
+  font: 500 13px/1.2 var(--body);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 20px 0 12px 38px;
+}
+
+.details dt {
+  color: var(--muted);
+  font: 500 12px/1.2 var(--body);
+}
+
+.details dd {
+  margin: 3px 0 0;
+  font: 500 14px/1.2 var(--body);
+  overflow-wrap: anywhere;
+}
+
+.details a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
+.teamCard {
+  background: var(--yellow);
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.teamAvatar {
+  background: var(--blue);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-weight: 700;
+}
+
+.form input {
+  width: 100%;
+  min-width: 0;
+  padding: 7px 10px;
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+  background: #fff;
+  color: var(--ink);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.save {
+  background: var(--green);
+}
+
+.cancel {
+  background: #f2f2f2;
+}
+
+.notice {
+  margin: 0;
+}
+
+.notice:not(:empty) {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+}

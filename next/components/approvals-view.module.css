@@ -18,7 +18,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 32px;
+  gap: 12px;
   margin-bottom: 28px;
 }
 
@@ -86,13 +86,6 @@
 
 .card:hover {
   box-shadow: 4px 4px 0 var(--ink);
-}
-
-.card:focus-visible,
-.dialog button:focus-visible,
-.dialog textarea:focus-visible {
-  outline: 3px solid var(--ink);
-  outline-offset: 5px;
 }
 
 .artwork {
@@ -219,10 +212,6 @@
 }
 
 @media (max-width: 900px) {
-  .filters {
-    gap: 16px;
-  }
-
   .grid {
     display: flex;
     flex-direction: column;

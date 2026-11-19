@@ -19,6 +19,7 @@ function menuHref(label: string) {
   if (label === 'Messages') return '/messages';
   if (label === 'Requests') return '/requests';
   if (label === 'Billing') return '/billing';
+  if (label === 'Account') return '/account';
   return `/#${label.toLowerCase().replaceAll(' ', '-')}`;
 }
 
@@ -34,6 +35,7 @@ function defaultSelection(pathname: string) {
   if (pathname === '/messages') return 'menu:Messages';
   if (pathname === '/requests') return 'menu:Requests';
   if (pathname === '/billing') return 'menu:Billing';
+  if (pathname === '/account') return 'menu:Account';
   if (pathname === '/services/social-media-marketing') return 'service:Social Media Marketing';
   return pathname === '/services' ? 'menu:My Services' : 'menu:Dashboard';
 }
@@ -44,7 +46,7 @@ export function Sidebar({ fullHeight = false }: { fullHeight?: boolean }) {
 
   useEffect(() => {
     const syncSelection = () => {
-      if (['/approvals', '/performance', '/reports', '/files', '/messages', '/requests', '/billing'].includes(pathname)) {
+      if (['/approvals', '/performance', '/reports', '/files', '/messages', '/requests', '/billing', '/account'].includes(pathname)) {
         setSelectedItem(defaultSelection(pathname));
         return;
       }
@@ -83,6 +85,6 @@ export function Sidebar({ fullHeight = false }: { fullHeight?: boolean }) {
       const selected = selectedItem === itemId;
       return <Link href={serviceHref(index)} className={selected ? 'active' : undefined} aria-current={selected ? 'location' : undefined} onClick={() => setSelectedItem(itemId)} key={item}>{item}</Link>;
     })}</div>
-    <Link href="/#account" className="sidebar-profile" aria-label="Rahul Sharma account" onClick={() => setSelectedItem('menu:Account')}><div className="profile-avatar">RS</div><div><b>Rahul Sharma</b><small>rahul@abc.com</small></div></Link>
+    <Link href="/account" className="sidebar-profile" aria-label="Rahul Sharma account" onClick={() => setSelectedItem('menu:Account')}><div className="profile-avatar">RS</div><div><b>Rahul Sharma</b><small>rahul@abc.com</small></div></Link>
   </aside>;
 }
