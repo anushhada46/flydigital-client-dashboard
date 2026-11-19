@@ -27,6 +27,12 @@ const files = [
 ];
 const fileTypes = ['All Files', 'Reports', 'Invoices', 'Contract', 'Proposals', 'Other'];
 
+function FileActionIcon({ download }: { download: boolean }) {
+  return <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    {download ? <path d="M8 2v8m-3-3 3 3 3-3M3 10v3h10v-3" /> : <><path d="M6 3H3v10h10v-3M9 2h5v5M14 2 7 9" /></>}
+  </svg>;
+}
+
 export function LibraryView({ mode }: { mode: 'reports' | 'files' }) {
   const [service, setService] = useState('All');
   const [fileType, setFileType] = useState('All Files');
@@ -52,7 +58,7 @@ export function LibraryView({ mode }: { mode: 'reports' | 'files' }) {
         {visibleFiles.filter((_, index) => index % 3 === column).map(file => <article className={styles.file} key={file.id}>
           <div className={styles.fileHeading}><h2>{file.title}</h2><span className={`${styles.tag} ${styles[file.tone]}`}>{file.service}</span></div>
           <p>{file.format}</p><time dateTime={file.date.includes('13') ? '2026-09-13' : '2026-09-21'}>{file.date} · Dipak Maharjan</time>
-          <div className={styles.actions}><a className={styles.fileAction} href={`/documents/${file.id}.txt`} download={file.action === 'Download' ? `${file.id}.txt` : undefined} target={file.action === 'Open' ? '_blank' : undefined} rel={file.action === 'Open' ? 'noopener noreferrer' : undefined} aria-label={`${file.action} ${file.title}`}>{file.action}</a></div>
+          <div className={styles.actions}><a className={styles.fileAction} href={`/documents/${file.id}.txt`} download={file.action === 'Download' ? `${file.id}.txt` : undefined} target={file.action === 'Open' ? '_blank' : undefined} rel={file.action === 'Open' ? 'noopener noreferrer' : undefined} aria-label={`${file.action} ${file.title}`}><FileActionIcon download={file.action === 'Download'} />{file.action}</a></div>
         </article>)}
       </div>)}
     </section>}

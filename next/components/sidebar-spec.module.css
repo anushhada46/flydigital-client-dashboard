@@ -116,14 +116,6 @@
   text-align: left;
 }
 
-.root :global(.nav-link:hover), .root :global(.nav-link.active) {
-  background: var(--blue);
-  color: #fff;
-  border: var(--border);
-  box-shadow: var(--shadow);
-  padding: 7px 8px;
-}
-
 .root :global(.services-toggle) {
   width: 100%;
 }
@@ -340,10 +332,10 @@
 
 .root :global(.nav-link:hover), .root :global(.nav-link.active) {
   padding: 8px 10px;
-  border: 1px solid #101820;
-  border-radius: 4px;
-  box-shadow: 1px 1px 0 #101820;
-  background: #009cde;
+  border: var(--nav-pill-border);
+  border-radius: var(--nav-pill-radius);
+  box-shadow: var(--nav-pill-shadow);
+  background: var(--blue);
   color: #fff;
 }
 
@@ -369,10 +361,10 @@
 }
 
 .root :global(.active-services a:hover), .root :global(.active-services a.active) {
-  border: 1px solid #101820;
-  border-radius: 4px;
+  border: var(--nav-pill-border);
+  border-radius: var(--nav-pill-radius);
   background: #00b180;
-  box-shadow: 1px 1px 0 #101820;
+  box-shadow: var(--nav-pill-shadow);
 }
 
 .root :global(.sidebar-profile) {

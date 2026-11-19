@@ -24,9 +24,9 @@
 
 .filter {
   padding: 4px 9px;
-  border: 1px solid var(--ink);
-  border-radius: 2px;
-  box-shadow: 2px 2px 0 var(--ink);
+  border: var(--nav-pill-border);
+  border-radius: var(--nav-pill-radius);
+  box-shadow: var(--nav-pill-shadow);
   font: 500 14px/1.2 var(--body);
 }
 

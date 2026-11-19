@@ -12,6 +12,9 @@
   --muted: #5E625F;
   --border: 2px solid var(--ink);
   --shadow: 4px 4px 0 var(--ink);
+  --nav-pill-border: 1px solid var(--ink);
+  --nav-pill-shadow: 1px 1px 0 var(--ink);
+  --nav-pill-radius: 2px;
   --heading: 'Karantina',Impact,sans-serif;
   --body: 'Darker Grotesque',Arial,sans-serif;
 }

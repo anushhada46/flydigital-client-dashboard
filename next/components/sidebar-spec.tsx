@@ -13,9 +13,12 @@ function menuHref(label: string) {
   if (label === 'Dashboard') return '/';
   if (label === 'My Services') return '/services';
   if (label === 'Approvals') return '/approvals';
+  if (label === 'Performance') return '/performance';
   if (label === 'Reports') return '/reports';
   if (label === 'Files') return '/files';
   if (label === 'Messages') return '/messages';
+  if (label === 'Requests') return '/requests';
+  if (label === 'Billing') return '/billing';
   return `/#${label.toLowerCase().replaceAll(' ', '-')}`;
 }
 
@@ -25,9 +28,12 @@ function serviceHref(index: number) {
 
 function defaultSelection(pathname: string) {
   if (pathname === '/approvals') return 'menu:Approvals';
+  if (pathname === '/performance') return 'menu:Performance';
   if (pathname === '/reports') return 'menu:Reports';
   if (pathname === '/files') return 'menu:Files';
   if (pathname === '/messages') return 'menu:Messages';
+  if (pathname === '/requests') return 'menu:Requests';
+  if (pathname === '/billing') return 'menu:Billing';
   if (pathname === '/services/social-media-marketing') return 'service:Social Media Marketing';
   return pathname === '/services' ? 'menu:My Services' : 'menu:Dashboard';
 }
@@ -38,7 +44,7 @@ export function Sidebar({ fullHeight = false }: { fullHeight?: boolean }) {
 
   useEffect(() => {
     const syncSelection = () => {
-      if (['/approvals', '/reports', '/files', '/messages'].includes(pathname)) {
+      if (['/approvals', '/performance', '/reports', '/files', '/messages', '/requests', '/billing'].includes(pathname)) {
         setSelectedItem(defaultSelection(pathname));
         return;
       }

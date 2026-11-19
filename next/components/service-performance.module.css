@@ -7,8 +7,9 @@
 
 .period {
   padding: 4px 10px;
-  border: 1px solid var(--ink);
-  border-radius: 1px;
+  border: var(--nav-pill-border);
+  border-radius: var(--nav-pill-radius);
+  box-shadow: var(--nav-pill-shadow);
   background: #f2f2f2;
   color: var(--ink);
   font: 500 12px/1.2 var(--body);
@@ -17,16 +18,15 @@
 
 .period[aria-selected='true'] {
   background: var(--yellow);
-  box-shadow: 1px 1px 0 var(--ink);
 }
 
-.period:hover {
-  box-shadow: 1px 1px 0 var(--ink);
+.period:focus {
+  outline: none;
 }
 
 .period:focus-visible {
-  outline: 2px solid var(--ink);
-  outline-offset: 3px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .panel {
