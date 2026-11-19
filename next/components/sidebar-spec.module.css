@@ -246,13 +246,19 @@
   border-bottom: 0;
 }
 
-.root :global(.brand::after), .root :global(.client-switcher::after), .root :global(.main-nav::after), .root :global(.active-services::after) {
+.root :global(.brand)::after, .root :global(.client-switcher)::after, .root :global(.main-nav)::after, .root :global(.sidebar-profile)::before {
   content: '';
   position: absolute;
   right: calc(-1 * var(--sidebar-pad));
   bottom: 0;
   left: calc(-1 * var(--sidebar-pad));
   border-bottom: 1px solid #101820;
+  pointer-events: none;
+}
+
+.root :global(.sidebar-profile)::before {
+  top: 0;
+  bottom: auto;
 }
 
 .root :global(.brand) {
@@ -368,6 +374,7 @@
 }
 
 .root :global(.sidebar-profile) {
+  position: relative;
   margin-top: 0;
   border-top: 0;
   padding: 18px 8px;
